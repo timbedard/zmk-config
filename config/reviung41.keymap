@@ -12,7 +12,7 @@
 #define DEFAULT 0
 #define LOWER   1
 #define RAISE   2
-#define FUNCT   3
+#define ADJUST  3
 
 / {
         keymap {
@@ -30,9 +30,9 @@
                 lower_layer {
                         bindings = <
    &kp TILD &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT        &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR  &kp PIPE
-   &trans   &trans   &trans &trans   &trans   &trans           &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp trans &trans
+   &trans   &trans   &trans &trans   &trans   &trans           &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans &trans
    &trans   &trans   &trans &trans   &trans   &trans           &kp HOME  &kp PG_DN &kp PG_UP &kp END   &trans    &mt RSHFT DQT
-                                      &trans   &trans    &trans &trans    &trans
+                                     &trans   &trans    &trans &trans    &trans
                         >;
                 };
 
@@ -45,7 +45,7 @@
                         >;
                 };
 
-                funct_layer {
+                adjust_layer {
                         bindings = <
    &kp F12 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5        &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
    &trans  &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans  &trans
