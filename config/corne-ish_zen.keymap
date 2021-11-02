@@ -1,0 +1,62 @@
+/*
+*
+* Copyright (c) 2021 lowprokb.ca
+* SPDX-License-Identifier: MIT
+*
+*/
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#define DEFAULT 0
+#define LOWER   1
+#define RAISE   2
+#define ADJUST  3
+
+/ {
+        keymap {
+                compatible = "zmk,keymap";
+
+                default_layer {
+                        label = "DEFAULT";
+                        bindings = <
+   &kp TAB      &kp Q &kp W &kp E &kp R    &kp T        &kp Y         &kp U    &kp I     &kp O   &kp P    &kp BSPC
+   &mt LCTL ESC &kp A &kp S &kp D &kp F    &kp G        &kp H         &kp J    &kp K     &kp L   &kp SEMI &kp RET
+   &kp LSHFT    &kp Z &kp X &kp C &kp V    &kp B        &kp N         &kp M    &kp COMMA &kp DOT &kp FSLH &mt RSHFT SQT
+                            &none &kp LGUI &mo LOWER    &lt RAISE SPC &kp LALT &none
+                        >;
+                };
+
+                lower_layer {
+                        label = "LOWER";
+                        bindings = <
+   &kp TILD &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR      &kp PIPE
+   &trans   &trans   &trans &trans   &trans   &trans       &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp LA(SPACE) &trans
+   &trans   &trans   &trans &trans   &trans   &trans       &kp HOME  &kp PG_DN &kp PG_UP &kp END   &trans        &mt RSHFT DQT
+                          	&trans   &trans   &trans       &trans    &trans    &trans
+                        >;
+                };
+
+                raise_layer {
+                        label = "RAISE";
+                        bindings = <
+   &kp GRAVE &kp N1  &kp N2   &kp N3   &kp N4    &kp N5         &kp N6    &kp N7    &kp N8      &kp N9   &kp N0   &kp BSLH
+   &trans    &kp SQT &kp LBRC &kp RBRC &kp MINUS &kp EQUAL      &kp TILDE &kp UNDER &kp KP_PLUS &kp LBRC &kp RBRC &trans
+   &trans    &kp DQT &kp LBKT &kp RBKT &kp UNDER &kp KP_PLUS    &trans    &trans    &trans      &trans   &trans   &trans
+                          	  &trans   &trans    &trans         &trans    &trans    &trans
+                        >;
+                };
+
+                adjust_layer {
+                        label = "ADJUST";
+                        bindings = <
+   &kp F12 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5    &kp F6     &kp F7       &kp F8       &kp F9       &kp F10       &kp F11
+   &trans  &trans &trans &trans &trans &trans    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4
+   &trans  &trans &trans &trans &trans &trans    &trans     &trans       &trans       &trans       &trans        &trans
+                         &trans &trans &trans    &trans     &trans       &trans
+                        >;
+                };
+
+        };
+};
