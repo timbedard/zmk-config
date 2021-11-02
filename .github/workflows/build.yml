@@ -50,7 +50,7 @@ jobs:
           path: reviung41_nice_nano.uf2
 
       - name: West Build (Corne-ish Zen Left)
-        run: west build -s zmk/app -b corne-ish_zen_left -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build --pristine -s zmk/app -b corne-ish_zen_left -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: Corne-ish Zen DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/corne-ish_zen_left.dts.pre.tmp
