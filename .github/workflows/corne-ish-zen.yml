@@ -1,6 +1,7 @@
 on:
   push:
     paths:
+      - build.yaml
       - "**corne-ish*"
       - "config/west.yml"
 
