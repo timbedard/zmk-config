@@ -1,5 +1,9 @@
 include:
   - board: nice_nano_v2
-    shield: ["corne-ish_zen_left", "corne-ish_zen_right"]
+    shield: corne-ish_zen_left
   - board: nice_nano_v2
-    shield: ["reviung41_left", "reviung41_right"]
+    shield: corne-ish_zen_right
+  - board: nice_nano_v2
+    shield: reviung41_left
+  - board: nice_nano_v2
+    shield: reviung41_right
